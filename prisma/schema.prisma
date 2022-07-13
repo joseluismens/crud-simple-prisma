@@ -40,3 +40,15 @@ model review {
   nickname   String?
   book       book?     @relation(fields: [book_id], references: [id])
 }
+
+
+model user{
+  id Int @default(autoincrement()) @id
+  nombres String?
+  apellidos String?
+  tipo_identificacion String?
+  identificacion String?
+  correo String @unique
+  password String
+  telefono String?
+}

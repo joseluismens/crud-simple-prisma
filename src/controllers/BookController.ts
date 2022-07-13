@@ -1,6 +1,5 @@
 import { Response, Request } from "express";
 import { PrismaClient } from "@prisma/client"
-import { generatePrime } from "crypto";
 const prisma = new PrismaClient();
 
 export default class BookController {

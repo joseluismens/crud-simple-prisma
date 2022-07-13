@@ -31,6 +31,19 @@ CREATE TABLE `review` (
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+-- CreateTable
+CREATE TABLE `user` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `nombres` VARCHAR(191) NULL,
+    `apellidos` VARCHAR(191) NULL,
+    `tipo_identificacion` VARCHAR(191) NULL,
+    `identificacion` VARCHAR(191) NULL,
+    `correo` VARCHAR(191) NOT NULL,
+    `password` VARCHAR(191) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 -- AddForeignKey
 ALTER TABLE `book` ADD CONSTRAINT `book_author_id_fkey` FOREIGN KEY (`author_id`) REFERENCES `author`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
